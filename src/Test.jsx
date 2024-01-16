@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 const Test = () => {
 	const variants = {
-		visible: (i) => ({
+		visible: i => ({
 			opacity: 1,
 			x: 100,
-			transition: { delay: i * 0.3 }
+			transition: { delay: i * 0.3 },
 		}),
-		hidden: { opacity: 0 }
-	};
+		hidden: { opacity: 0 },
+	}
 
-	const items = ['item1', 'item2', 'item3', 'item4'];
+	const items = ['item1', 'item2', 'item3', 'item4']
 
 	return (
 		<div className='courses'>
@@ -18,11 +18,12 @@ const Test = () => {
 				{items.map((item, i) => (
 					<motion.li variants={variants} key={item} custom={i}>
 						{item}
+						iodsgzhdfovbhdfuiovbji;zdvhbzfhvbz
 					</motion.li>
 				))}
 			</motion.ul>
 		</div>
-	);
-};
+	)
+}
 
-export default Test;
+export default Test

@@ -17,8 +17,78 @@ body {
 
 a {
 	text-decoration: none;
-	color: white;
+	color: inherit;
 }
 section {
 	height: 100vh;
+	scroll-snap-align: center;
+}
+
+@mixin mobile {
+	@media (max-width: 738px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (max-width: 1400px) {
+		@content;
+	}
+}
+
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	background-color: #0c0513;
+	background-image: url(../loader.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.Containerloader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 350px;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+	display: inline-flex;
+	gap: 5px;
+	animation: l3-0 1s infinite;
+	transform-origin: 50% calc(100% + 2.5px);
+}
+.loader:before,
+.loader:after {
+	content: '';
+	width: 25px;
+	aspect-ratio: 1;
+	box-shadow: 0 0 0 3px inset #5c0475;
+}
+.loader:after {
+	transform-origin: -2.5px calc(100% + 2.5px);
+	animation: l3-1 1s infinite;
+}
+@keyframes l3-1 {
+	50%,
+	100% {
+		transform: rotate(180deg);
+	}
+}
+@keyframes l3-0 {
+	0%,
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(90deg);
+	}
 }
