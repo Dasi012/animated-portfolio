@@ -1,6 +1,6 @@
-import Sidebar from '../sideBar/Sidebar';
-import './navbar.scss';
-import { motion } from 'framer-motion';
+import Sidebar from '../sideBar/Sidebar'
+import './navbar.scss'
+import { motion } from 'framer-motion'
 
 function NavBar() {
 	return (
@@ -11,7 +11,8 @@ function NavBar() {
 					initial={{ opacity: 0, scale: 0.5 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5 }}
-					className='wrapper'>
+					className='wrapper'
+				>
 					<span>Lama Dev</span>
 					<div className='social'>
 						<a href='#'>
@@ -30,7 +31,7 @@ function NavBar() {
 				</motion.div>
 			</div>
 		</>
-	);
+	)
 }
 
-export default NavBar;
+export default NavBar
